@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background-color: bisque;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myelement{
+    height: 470px;
+    width: 340px;
+   background-color: white;
+   border-radius: 10px;
+   overflow: hidden;
+   position: relative;
+}
+
+#myelement img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+#myelement i{
+    font-size: 80px;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+    transition: transform ease 0.4s;
+}
