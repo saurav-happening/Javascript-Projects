@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    height: 500px;
+    width: 80%;
+    margin: 150px auto; 
+    text-align: center;
+}
+
+span{
+    display: block;
+}
+
+.button{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    display: inline-block;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+h2{
+    margin-top: 20px;
+}
+
+#grey{
+    background: grey;
+}
+
+#yellow{
+    background: yellow;
+}
+
+#blue{
+    background: blue;
+}
+
+#pink{
+    background: pink;
+}
