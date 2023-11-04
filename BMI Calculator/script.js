@@ -5,8 +5,6 @@
 // formula - wight(in kg) / height * heights (in meters)
 
 
-
-
 // my way
 
 const form = document.querySelector("form")
@@ -40,12 +38,6 @@ form.addEventListener("submit",function(e){
             }
         
     }
-
-
-
-
-    // result.innerHTML = height
-
 
 })
 
