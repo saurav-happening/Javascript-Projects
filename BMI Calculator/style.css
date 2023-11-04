@@ -11,6 +11,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: rgb(40, 38, 38);
 }
 
 .container{
@@ -18,33 +19,63 @@ body{
     height: 400px;
     width: 500px;
     padding: 20px;
+    border-radius: 5px;
+    border: 2px solid black;
 }
 
-.result{
-    background-color: blue;
+#result{
     height: 40px;
     width: 200px;
+    margin: 10px 0 5px 120px;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
 }
 
 input{
     font-size: 20px;
     margin: 5px;
+    padding: 5px;
+    border-radius: 2px;
+    border: 2px solid black;
+
+}
+
+h1{
+    text-align: center;
+}
+
+.input-box{
+    margin-top: 10px;
+}
+
+label{
+    font-size: 20px;
 }
 
 #btn {
     background-color: white;
     color: black;
     padding: 10px;
-    border: 2px solid black;
     border-radius: 5px;
     cursor: pointer;
-    width: 150px;
-    height: 35px;
     font-size: 20px;
-    margin-left: 100px;
-    margin-top: 50px;
+    margin-left: 35%;
+    margin-top: 10px;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s, border 0.3s;
+    border: 2px solid transparent;
 }
 
 #btn:hover {
     background-color: #0056b3;
+    border: 2px solid black;
+}
+
+.user_info{
+    text-align: center;
+    font-size: 18px;
+    margin-top: 20px;
 }
