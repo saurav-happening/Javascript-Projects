@@ -1,0 +1,7 @@
+1- /* take input value from user - by click on button-
+2- then need to verify value--
+-- if value is nan - show msg - can use alert
+-- if value is < 1 or > 100 
+-- then -- can append value to the prev guess list
+-- if no. of guess > 10 then -
+-- make - func - to show final values of prev guess, r
