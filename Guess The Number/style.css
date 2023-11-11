@@ -59,7 +59,7 @@ input{
     border: 2px solid transparent;
 }
 
-button{
+.my_button{
     padding: 10px;
     margin-left: 6vw;
     margin-top: 5vh;
@@ -84,4 +84,11 @@ button:hover{
 
 #user_status h3{
     margin: 10px;
+}
+
+#guess_list{
+    background-color: white;
+    
+    height: 30px;
+    width: 20px;
 }
