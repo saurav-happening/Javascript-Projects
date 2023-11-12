@@ -20,7 +20,7 @@ body{
 }
 
 #container{
-    height: 500px;
+    height: 550px;
     width: 800px;
     background-color: rgb(194, 194, 85);
     border-radius: 20px;
@@ -76,19 +76,33 @@ button:hover{
 
 #user_status{
     position: absolute;
-    top: 70%;
+    top: 65%;
     left: 32%;
-    height: 10vh;
     padding: 5px;
 }
 
-#user_status h3{
+.no-change-h3{
     margin: 10px;
 }
 
 #guess_list{
     background-color: white;
-    
     height: 30px;
     width: 20px;
+}
+
+.user_status_btn{
+    margin-left: 7vw;
+    margin-top: 3vh;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    font-weight: bold;
+}
+
+#msg{
+    color: green;
+    text-align: center;
 }

@@ -7,7 +7,7 @@ const user_status = document.querySelector('#user_status')
 
 
 // Generating a random number
-const random_num = Math.floor(Math.random() * 100 ) + 1
+let random_num = Math.floor(Math.random() * 100 ) + 1
 console.log(random_num);
 
 let prev_guess = []
@@ -45,7 +45,7 @@ function validating(guess){
 }
 
 function correct_guess(guess){
-    if (guess_count > 10) {
+    if (guess_count >= 2) {
         showmsg(`GAME OVER - Correct Number is ${random_num}`)
         reset_values_msg(guess)
         gameend()
@@ -57,7 +57,7 @@ function correct_guess(guess){
 
 function checking(guess){
     if(guess === random_num){
-        showmsg(`Your Guess is right. Won ----`)
+        showmsg(`Your Guess is right. ------ Won ------`)
         gameend()
 
     }else if(guess > random_num){
@@ -85,11 +85,34 @@ function all_guess(val){
     let hello = prev_guess.push(val)
 }
 
+let bt = document.createElement('button')
 
 // ending game - disabling userinput so that can't write - and adding button for new game
 function gameend(){
     user_input.value = ''
     user_input.setAttribute('disabled', '')
-    let bt = document.createElement('button')
-    bt.classList.add()
+
+    // creating new button for new game
+    bt.classList.add('user_status_btn')
+    bt.innerText = 'New Game'
+    user_status.appendChild(bt)
+    // setting want_to_play to false
+    want_to_play = false
+    newgame()
+}
+
+
+// resetting all the value - back to normal - after clicking new game button
+function newgame(){
+    bt.addEventListener('click', function(){
+    let random_num = Math.floor(Math.random() * 100 ) + 1
+    prev_guess = []
+    guess_count = 1
+    guess_list.innerHTML = ''
+    remaining_attempts.innerHTML = `${11- guess_count}`
+    user_input.removeAttribute('disabled')
+    user_status.removeChild(bt)
+    message.innerHTML = 'hello'
+    want_to_play = true
+    })
 }
