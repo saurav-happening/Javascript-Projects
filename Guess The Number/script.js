@@ -94,7 +94,7 @@ function gameend(){
 
     // creating new button for new game
     bt.classList.add('user_status_btn')
-    bt.innerText = 'New Game'
+    bt.innerText = 'Try Again'
     user_status.appendChild(bt)
     // setting want_to_play to false
     want_to_play = false
