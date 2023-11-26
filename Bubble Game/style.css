@@ -59,7 +59,7 @@ html, body{
 
 #bottom-panel{
     padding: 20px;
-    background-color: yellow;
+    /* background-color: yellow; */
     width: 100%;
     /* giving remaining height to bottom panel */
     height: calc(100% - 80px);      
@@ -67,6 +67,7 @@ html, body{
     flex-wrap: wrap;
     gap: 4px;
     justify-content: center;
+    align-items: center;
 }
 
 

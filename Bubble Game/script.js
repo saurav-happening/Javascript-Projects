@@ -1,4 +1,5 @@
-
+let score_value = 0;
+let random_num = 0;
 
 // creating bubble div
 
@@ -27,21 +28,37 @@ function countdown_timer(){
     let count_timer = setInterval(function(){
     if(countdown>0){
         countdown--;
-        // console.log(countdown);
+
         document.querySelector("#timer").innerHTML = countdown
     } else{
         clearInterval(count_timer)
+
+        // when time become 0 remove bubbles that is bottom-panel
+        let bottom_panel = document.querySelector("#bottom-panel") 
+        bottom_panel.innerHTML = `<h1 id="game_over">Game Over : Score ${score_value}</h1>`
+        
     }
 },1000)
+
+
+
 
 }
 
 // hit counter - changing hit number
 
 function hit_value(){
-    let random_num = Math.floor(Math.random() * 10)
+    random_num = Math.floor(Math.random() * 10)
     document.querySelector("#hit").innerHTML = random_num
-    console.log(random_num);
+}
+
+// increasing value of score
+
+function score_increasing(){
+    score_value += 10;
+    let capture = document.querySelector("#score_box");
+    capture.innerHTML = score_value
+
 }
 
 
@@ -50,7 +67,16 @@ function hit_value(){
 
 let bubble = document.querySelector("#bottom-panel")
 bubble.addEventListener("click", function(e){
-    console.log(e.target.innerHTML);
+    let num = Number(e.target.innerHTML)  // get the number from the bubble
+    
+    if(num === random_num){
+        score_increasing()
+        hit_value()
+        creating_bubble()
+
+        let bottom_panel = document.querySelector("#bottom-panel") = ""
+    }
+
 })
 
 
